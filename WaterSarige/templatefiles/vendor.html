@@ -1,0 +1,48 @@
+<div class="container" style="border-style: groove;margin-top:20px;background-color:#EAEDED">
+    <div class="container">
+        <div class="container">
+            <h1 class="text-center" style="color:blue">Sree Suppliers</h1>
+            <h2>Raghunath</h2>
+            <p style="margin-left: 10px;">We believe in satisfying our customers with excellent transport system. We are having good suppliers who will respond in a limited amount of time.<br> We are in this business from the past 6 years and we assure the health and comfort of the customer.</p>
+            <table>
+                <tr>
+                    <td class="m">Location</td>
+                    <td class="n">: 4th block, Jayanagar</td>
+                </tr>
+                <tr>
+                    <td class="m">Mobile Number</td>
+                    <td class="n">: 9999999999</td>
+                </tr>
+                <tr>
+                    <td class="m">Rating</td>
+                    <td class="n">: 4</td>
+                </tr>
+                <tr>
+                    <td class="m">No of suppliers</td>
+                    <td class="n">: 20</td>
+                </tr>
+                <tr>
+                    <td class="m">Price</td>
+                    <td class="n">: 20 per can</td>
+                </tr>
+            </table>
+            <br/>
+            <br/>
+            <div class="row">
+                <div class="col-md-9"></div>
+                <div>
+                    <form action="payment.html" method="POST">
+                        {% csrf_token %}
+                        {% if user.is_authenticated %}
+                        <a href="placetheorder.html" style="font-size:20px;">Place the order</a>
+                        {% else %}
+                         <a href="loginn.html" style="font-size:20px;"> You need to login first </a>
+                        {% endif %}
+
+</form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
